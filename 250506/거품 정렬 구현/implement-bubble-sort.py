@@ -1,14 +1,14 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-def bubble_sort(num, ls):
+def doubble_sort(num, ls):
     for i in range(num):
         for j in range(num - 1 - i):
-            if ls[j] > ls[j + 1]:  # ✅ ls로 비교
-                ls[j], ls[j + 1] = ls[j + 1], ls[j]
+            if ls[j] > ls[j+ 1]:
+                data = ls[j]
+                ls[j] = ls[j + 1]
+                ls[j+1] = data
     return ls
-
-sorted_arr = bubble_sort(n, arr)
-
-for d in sorted_arr:
-    print(d, end=" ")
+sorted_arr = doubble_sort(n, arr)
+for k in sorted_arr:
+    print(k, end=" ")
