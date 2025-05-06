@@ -1,17 +1,14 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-# Please write your code here.
+def bubble_sort(num, ls):
+    for i in range(num):
+        for j in range(num - 1 - i):
+            if ls[j] > ls[j + 1]:  # ✅ ls로 비교
+                ls[j], ls[j + 1] = ls[j + 1], ls[j]
+    return ls
 
+sorted_arr = bubble_sort(n, arr)
 
-def bubble_sort(num, ls)i:
-    for i in range(n):
-        for j in range(n - 1 - i):
-            if arr[j] > arr[j+1]
-                data = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = data
-    return arr
-
-for d in arr:
+for d in sorted_arr:
     print(d, end=" ")
